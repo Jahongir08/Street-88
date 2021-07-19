@@ -1,0 +1,452 @@
+@import url(fonts.css);
+
+/* ROOT start */
+:root {
+    --white: #FFF;
+    --title: #69CF17;
+    --body: #0C0C0C;
+    --fontFirst: "Raleway";
+    --fontSecond: "Roboto";
+    --logo: rgba(10, 148, 24, 0.75);
+    --header: rgba(0, 0, 0, 0.5);
+    --banner: linear-gradient(0deg, rgba(12, 12, 12, 0.72), rgba(12, 12, 12, 0.72));
+    --price: rgba(105, 207, 23, 0.5);
+    --burgerMenu: #292929;
+    --footerBg: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body);
+    font-family: var(--fontFirst);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--title);
+    border-radius: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    background: linear-gradient(90deg, #69CF17 0%, #417D11 100%);
+    padding: 15px 72px;
+    color: var(--white);
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    font-family: var(--fontFirst);
+    font-weight: 400;
+}
+
+/* ROOT end */
+/* ======================== */
+/* ADS start */
+.menu {
+    display: flex;
+    padding: 18px 0;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.menu__link {
+    color: var(--white);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.menu__icon {
+    font-size: 23px;
+    margin-right: 5px;
+}
+
+span {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.ads {
+    display: flex;
+}
+
+.ads__link {
+    color: var(--white);
+    margin-left: 20px;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+/* ADS end */
+/* ======================== */
+/* HEADER start */
+.logo {
+    font-size: 36px;
+    line-height: 30px;
+    padding: 8px 14px 7px 14px;
+    color: var(--white);
+    background: var(--logo);
+    border: 4px solid #06600F;
+    border-radius: 4px;
+    font-family: var(--fontSecond);
+    font-weight: 700;
+}
+
+.header {
+    background: var(--header);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(125, 115, 115, 0.5);
+    border-bottom: 1px solid rgba(125, 115, 115, 0.5);
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__burger {
+    background: none;
+    color: var(--white);
+    font-size: 40px;
+    line-height: 40px;
+    padding: 20px;
+    border: none;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link:hover,
+.nav__link_active {
+    background: rgba(105, 207, 23, 0.75);
+}
+
+.nav__link {
+    color: var(--white);
+    height: 100%;
+    padding: 22px 14px;
+    transition: 0.5s;
+    font-size: 18px;
+    display: inline-block;
+}
+
+/* HEADER end */
+/* ======================== */
+/*  BANNER start */
+.banner {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.banner__content {
+    display: flex;
+    align-items: center;
+    background: var(--banner);
+    position: relative;
+    flex-grow: 1;
+}
+
+.banner__title {
+    font-family: var(--fontFirst);
+    font-weight: 900;
+    font-size: 72px;
+    color: var(--title);
+    margin-bottom: 18px;
+}
+
+.banner__text {
+    font-family: var(--fontFirst);
+    font-weight: 400;
+    line-height: 17px;
+    margin-left: -4px;
+    font-size: 36px;
+    margin-bottom: 29px;
+}
+
+.banner__desc {
+    font-family: var(--fontFirst);
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.banner__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.price {
+    text-align: center;
+    padding: 33px 76px 45px;
+    backdrop-filter: blur(18px);
+    font-family: var(--fontFirst);
+    font-weight: 100;
+    background: var(--price);
+    color: var(--white);
+    font-size: 50px;
+    line-height: 25px;
+}
+
+/*  BANNER end */
+/* ======================== */
+/* MAIN start */
+.burger__menu {
+    margin-top: 48px;
+    margin-bottom: 15px;
+}
+
+.main__links {
+    background: var(--burgerMenu);
+    display: flex;
+}
+
+.main__link {
+    font-family: var(--fontSecond);
+    color: var(--white);
+    padding: 21px 6px;
+    display: block;
+    font-size: 18px;
+    margin-right: 24px;
+    position: relative;
+}
+
+.main__link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    display: block;
+    background: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: 500ms;
+}
+
+.main__link_left {
+    margin-left: 15px;
+}
+
+.main__link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* MAIN end */
+/* ======================== */
+/* BURGERS start */
+.burgers__card {
+    position: relative;
+    background: #0C0C0C;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 16px 39px;
+}
+
+.burgers__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.burgers__box {
+    position: relative;
+    height: 325px;
+}
+
+.burgers__icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    font-size: 60px;
+    background: rgba(105, 207, 23, 0.9);
+    opacity: 0;
+    transition: 500ms;
+}
+
+.burgers__title {
+    font-family: var(--fontFirst);
+    font-size: 19px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.burgers__desc {
+    font-size: 19px;
+    font-family: var(--fontFirst);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.burgers {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 15px;
+    background: #393636;
+}
+
+/* BURGERS end */
+/* ======================== */
+/* MAP start */
+.map {
+    margin-top: 70px;
+}
+
+.map__title {
+    background: var(--white);
+    color: var(--title);
+    font-family: var(--fontFirst);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.map__img {
+    width: 100%;
+}
+
+/* MAP end */
+/* ======================== */
+/* LAST MENU satrt */
+.footer {
+    background: var(--footerBg);
+}
+
+.bottom {
+    padding: 30px 0 0;
+}
+
+.bottom__call {
+    color: var(--white);
+    font-family: var(--fontSecond);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__link {
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--fontSecond);
+    font-weight: 400;
+    margin-left: 13px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    padding: 81px 0;
+}
+
+.footer__description {
+    background: #1A3406;
+    font-family: var(--fontSecond);
+    font-weight: 400;
+    text-align: center;
+    padding: 19px 0;
+}
+
+/* LAST MENU end */
+/* ======================== */
+/* CUTLETS start */
+.cutlets {
+    padding: 30px 0 33px;
+}
+
+.cutlets__title {
+    background: url(../img/cutlets.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 400px;
+    text-transform: uppercase;
+    color: rgba(105, 207, 23, 0.7);
+    text-shadow: 0px 0px 15px rgba(191, 171, 171, 0.4);
+    font-family: var(--fontFirst);
+    font-weight: 700;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cutlets__desc {
+    line-height: 25px;
+    text-align: justify;
+    font-family: var(--fontFirst);
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.map__top {
+    margin-top: 0;
+}
+
+/* CUTLETS end */
+/* ======================== */
+/* MAP start */
+/* MAP end */
+/* ======================== */
+/* MAP start */
+/* MAP end */
+/* ======================== */
